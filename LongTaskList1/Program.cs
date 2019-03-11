@@ -19,7 +19,7 @@ namespace LongTaskList1
             
             Console.ForegroundColor = ConsoleColor.Yellow;
             List<string> Page1 = new List<string>();
-            Page1.Capacity = 25;
+            Console.WriteLine("Task List");
             OptionsMenu(Page1);
             
 
