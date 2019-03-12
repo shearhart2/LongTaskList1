@@ -20,6 +20,7 @@ namespace LongTaskList1
             Console.ForegroundColor = ConsoleColor.Yellow;
             List<string> Page1 = new List<string>();
             Console.WriteLine("Task List");
+            ShowTaskList(Page1);
             OptionsMenu(Page1);
             
 
@@ -236,12 +237,13 @@ namespace LongTaskList1
             while (true)
             {
 
-                Console.WriteLine("\nOPTIONS MENU:" +
+                Console.WriteLine("\nTASK LIST MENU:" +
                 
                   "\n\t1. Go to Page 2 of Task List" +
                   "\n\t2. Go to Page 3 of Task List" +
                   "\n\t3. Go to Page 4 of Task List" +
-                  "\n\t4. Go to Options Menu");
+                  "\n\t4. Go to Page 1 of Task List" +
+                  "\n\t5. Go to Options Menu");
                 string userInput = Console.ReadLine();
                 try
                 {
@@ -321,7 +323,12 @@ namespace LongTaskList1
 
                         }
                     }
-                    else if (userInput == "4")
+                    else if(userInput == "4")
+                    {
+                        ShowTaskList(pageNumber);
+                        break;
+                    }
+                    else if (userInput == "5")
                     {
                         break;
                     }
